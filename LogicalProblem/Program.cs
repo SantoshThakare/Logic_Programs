@@ -3,4 +3,4 @@ using LogicalProblem;
 
 Console.WriteLine("Welcome To Logical Programs");
 Logic GetLogic = new Logic();
-GetLogic.Prob();
+GetLogic.prob();

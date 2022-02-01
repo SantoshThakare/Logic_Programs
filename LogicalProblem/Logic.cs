@@ -7,23 +7,34 @@ using System.Threading.Tasks;
 namespace LogicalProblem
 {
     public class Logic
-    {
-        int p1 = 0, p2 = 1, p3;
-        public void Prob()
+    { 
+       
+        public static int Find_Factors(int input)
         {
-            Console.WriteLine("Enter the Input Value");
-            int count = Int32.Parse(Console.ReadLine());
-            Console.WriteLine(  p1 + "\n " + p2);
-            for (int i = 2; i < count; i++)
-            {
-                p3 = p1 + p2;
-                Console.WriteLine("  " + p3);
-                p1 = p2;
-                p2 = p3;       
            
+            int sum = 0;
+            for (int i = 1; i <input; i++)
+            {
+                if (input%i == 0)
+                {
+                    sum = sum + i;
+                }
             }
-                 Console.WriteLine();
-
+            return sum;
+        }
+        public  void prob()
+        {
+            Console.WriteLine("Enter value");
+            int input = int.Parse(Console.ReadLine());
+            int result = Find_Factors(input);
+            if (input == result)
+            {
+                Console.WriteLine($"{input} is perfact number");
+            }
+            else
+            {
+                Console.WriteLine($"{input} is not  perfact number");
+            }
         }
 
     }
