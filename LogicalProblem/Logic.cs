@@ -10,30 +10,21 @@ namespace LogicalProblem
     {                                                              
         public  void prob()
         {
-
-            int n = 11, a = 0;
-           
-            
-                for (int i = 1; i <= n; i++)
-                {
-                    if (n % i == 0)
-                    {
-                        a++;
-                    }
-                }
-                if (a == 2)
-                {
-                    Console.WriteLine("{0} is a Prime Number", n);
-                }
-                else
-                {
-                    Console.WriteLine("Not a Prime Number");
-                }
-                Console.ReadLine();
-            
-
+            int num = 1234;
+            int Result = 0;
+            int rem;
+            while (num != 0)
+            {
+                rem =num % 10;
+                Result = Result * 10 + rem;
+                num = num / 10;
+            }
+            Console.WriteLine($"{Result} ");
+            Console.ReadLine(); 
         }
+
 
     }
    
 }
+        
