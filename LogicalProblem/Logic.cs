@@ -7,34 +7,31 @@ using System.Threading.Tasks;
 namespace LogicalProblem
 {
     public class Logic
-    { 
-       
-        public static int Find_Factors(int input)
-        {
-           
-            int sum = 0;
-            for (int i = 1; i <input; i++)
-            {
-                if (input%i == 0)
-                {
-                    sum = sum + i;
-                }
-            }
-            return sum;
-        }
+    {                                                              
         public  void prob()
         {
-            Console.WriteLine("Enter value");
-            int input = int.Parse(Console.ReadLine());
-            int result = Find_Factors(input);
-            if (input == result)
-            {
-                Console.WriteLine($"{input} is perfact number");
-            }
-            else
-            {
-                Console.WriteLine($"{input} is not  perfact number");
-            }
+
+            int n = 11, a = 0;
+           
+            
+                for (int i = 1; i <= n; i++)
+                {
+                    if (n % i == 0)
+                    {
+                        a++;
+                    }
+                }
+                if (a == 2)
+                {
+                    Console.WriteLine("{0} is a Prime Number", n);
+                }
+                else
+                {
+                    Console.WriteLine("Not a Prime Number");
+                }
+                Console.ReadLine();
+            
+
         }
 
     }
